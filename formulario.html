@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="conexion.php" method="POST">
+            <h1>Formulario de Registro</h1>
+            <div class="input-box">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" name="apellido" placeholder="Apellido" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" name="apellido2" placeholder="Segundo Apellido" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" name="correo_institucional" placeholder="Correo Institucional" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" name="correo_personal" placeholder="Correo Personal" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                <input type="date" name="fecha_nacimiento" required>
+            </div>
+            <div class="select">
+                <label for="estudio">Estudio</label>
+                <select name="estudio" id="estudio" required>
+                    <option value="" disabled selected>Seleccione</option>
+                    <option value="Aplazado">Aplazado</option>
+                    <option value="Cancelado">Cancelado</option>
+                    <option value="Certificado">Certificado</option>
+                    <option value="Condicionado">Condicionado</option>
+                    <option value="En formacion">En formacion</option>
+                    <option value="Induccion">Induccion</option>
+                    <option value="Por Certificado">Por Certificado</option>
+                    <option value="Retiro Voluntario">Retiro Voluntario</option>
+                </select>
+            </div>
+            <div class="select">
+                <label for="genero">Género</label>
+                <select name="genero" id="genero" required>
+                    <option value="" disabled selected>Seleccione</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Masculino">Masculino</option>
+                </select>
+            </div>
+            <div class="select">
+                <label for="discapacidad">Discapacidad</label>
+                <select name="discapacidad" id="discapacidad" required>
+                    <option value="" disabled selected>Seleccione</option>
+                    <option value="Auditiva">Auditiva</option>
+                    <option value="Fisica">Fisica</option>
+                    <option value="Selectiva">Selectiva</option>
+                    <option value="Psicosocial">Psicosocial</option>
+                    <option value="Visual">Visual</option>
+                    <option value="Sordoceguera">Sordoceguera</option>
+                    <option value="Ninguna">Ninguna</option>
+                </select>
+            </div>
+            <div class="formula">
+                <label for="tipo_sangre">Tipo de sangre:</label>
+                <input type="radio" name="tipo_sangre" value="A+" required>A+<br>
+                <input type="radio" name="tipo_sangre" value="A-">A-<br>
+                <input type="radio" name="tipo_sangre" value="B+">B+<br>
+                <input type="radio" name="tipo_sangre" value="B-">B-<br>
+                <input type="radio" name="tipo_sangre" value="AB+">AB+<br>
+                <input type="radio" name="tipo_sangre" value="AB-">AB-<br>
+                <input type="radio" name="tipo_sangre" value="0+">0+<br>
+                <input type="radio" name="tipo_sangre" value="0-">0-<br>
+            </div>
+            <div class="formula">
+                <label for="convive">Con quien convive:</label>
+                <select multiple name="convive[]" id="convive" required>
+                    <option value="Padre/Madre">Padre/Madre</option>
+                    <option value="Padre">Padre</option>
+                    <option value="Madre">Madre</option>
+                    <option value="Tio">Tio</option>
+                    <option value="Abuela">Abuela</option>
+                    <option value="Esposo">Esposo</option>
+                    <option value="Otro(a)">Otro(a)</option>
+                </select>
+            </div>
+            <div class="formula">
+                <label for="deporte">Deporte que practica</label>
+                <input type="checkbox" name="deporte[]" value="Futbol">Futbol<br>
+                <input type="checkbox" name="deporte[]" value="Tenis">Tenis<br>
+                <input type="checkbox" name="deporte[]" value="Beisbol">Beisbol<br>
+                <input type="checkbox" name="deporte[]" value="Voleibol">Voleibol<br>
+                <input type="checkbox" name="deporte[]" value="Natacion">Natacion<br>
+                <input type="checkbox" name="deporte[]" value="Patinaje">Patinaje<br>
+            </div>
+            <div>
+                <label for="descripcion">Defina brevemente su proyecto de vida:</label>
+                <textarea name="descripcion" cols="40" rows="5"></textarea>
+                <input type="file" id="imagen" name="imagen" accept="imagen/*">
+            </div>
+            <div class="input-box">
+                <input type="password" name="contrasena" id="password" placeholder="Digite su contraseña" />
+            </div>
+            <div>
+                <button type="submit" class="btn">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
