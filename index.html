@@ -32,21 +32,22 @@
     </div>
     <script src="script.js"></script>
 </body>
-<div class="BusquedaMenu">
-    <p>Busqueda</p> <!-- Título de Búsqueda arriba -->
-    <div class="Menu-despegable">
-        <a href="#" class="titulo">Páginas</a>
-        <ul class="MenuMini">
-            <li><a href="https://www.sena.edu.co/es-co/Paginas/default.aspx">Página Sena</a></li>
-            <li><a href="https://comunidadsenaguajira.blogspot.com/2008/08/himno-del-sena.html">Himno del Sena</a></li>
-            <li><a href="https://oferta.senasofiaplus.edu.co/sofia-oferta/">Sofia plus</a></li>
-            <li><a href="https://caprendizaje.sena.edu.co/sgva/sgva_diseno/pag/login.aspx">Caprendizaje</a></li>
-        </ul>
-    </div>
-    <div class="botonBusqueda">
-        <div class="busqueda-inside">
-            <input type="text" name="search" placeholder="Buscador" required>
-            <div class="botonBuscar">
+    <div class="contenido-flex"> <!-- Nuevo contenedor para alinear -->
+        <!-- Menú desplegable de páginas -->
+        <div class="Menu-despegable">
+            <a href="#" class="titulo">Páginas</a>
+            <ul class="MenuMini">
+                <li><a href="https://www.sena.edu.co/es-co/Paginas/default.aspx">Página Sena</a></li>
+                <li><a href="https://comunidadsenaguajira.blogspot.com/2008/08/himno-del-sena.html">Himno del Sena</a></li>
+                <li><a href="https://oferta.senasofiaplus.edu.co/sofia-oferta/">Sofia plus</a></li>
+                <li><a href="https://caprendizaje.sena.edu.co/sgva/sgva_diseno/pag/login.aspx">Caprendizaje</a></li>
+            </ul>
+        </div>
+
+        <!-- Campo de búsqueda con botón -->
+        <div class="botonBusqueda">
+            <div class="busqueda-inside">
+                <input type="text" name="search" placeholder="Buscador" required>
                 <div class="icoBuscar">
                     <img src="buscar.jpg" alt="buscar">
                 </div>
@@ -54,4 +55,47 @@
         </div>
     </div>
 </div>
+<body>
+    <div class="container">
+        <!-- Columna Izquierda -->
+        <div class="left-column">
+            <h2>Páginas de Interés</h2>
+            <ul>
+                <li><a href="#">El Gran Libro de Python</a></li>
+                <li><a href="#">HTML: Lenguaje de etiquetas de hipertexto</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">CSS (Hojas de Estilo en Cascada)</a></li>
+                <li><a href="#">MySQL para Principiantes</a></li>
+            </ul>
+            <div class="survey">
+                <p>¿Desea Realizar una Encuesta sobre Programación Front-end?</p>
+                <button>Realizar Encuesta</button>
+            </div>
+            <div class="comments">
+                <p>Aquí puedes dejar tus opiniones sobre la página 😉</p>
+                <textarea placeholder="Escribe tus críticas constructivas..."></textarea>
+                <button>Enviar Comentarios</button>
+            </div>
+        </div>
+
+        <!-- Columna Central -->
+        <div class="center-column">
+            <h1>El SENA una entidad de clase mundial</h1>
+            <p>El Sena es una entidad pública...</p>
+            <img src="sena_building.jpg" alt="Sede del SENA">
+            <h2>Himno del SENA</h2>
+            <iframe src="https://www.youtube.com/embed/videoID" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Columna Derecha -->
+        <div class="right-column">
+            <h2>Página @SENA Norte de Santander</h2>
+            <div class="social-media">
+                <!-- Widget de redes sociales o imagenes -->
+            </div>
+            <h2>Archivos de Aprendizaje</h2>
+            <button>Menú De Descargas</button>
+        </div>
+    </div>
+</body>
 </html>
