@@ -202,45 +202,326 @@ a:hover {
 
 
 
+:root {
+    --primary-color: #00d9ff;
+    --bg-dark: #2c2c2c;
+    --bg-darker: #1c1c1c;
+    --text-light: #f5f5f5;
+    --accent-color: #007bff;
+    --hover-color: #0056b3;
+    --card-bg: #333;
+    --transition: all 0.3s ease;
+}
 
-.container {
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Header y Navegación */
+nav.main-nav {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 1.25rem 5%;
+    background-color: var(--bg-darker);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Slider */
+.slider-box {
     width: 100%;
-    margin: auto;
-    color: black;
+    max-width: 1200px;
+    height: 600px;
+    margin: 2.5rem auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
-.left-column, .center-column, .right-column {
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    color: black;
+.slider {
+    height: 100%;
 }
 
-.left-column {
-    flex: 1; /* Permitir que esta columna crezca */
-    max-width: 24%; /* Puedes ajustar esto según lo que necesites */
+.slider ul {
+    display: flex;
+    height: 100%;
 }
 
-.center-column {
-    flex: 2; /* Permitir que esta columna crezca más */
-    max-width: 55%; /* Puedes ajustar esto según lo que necesites */
+.slider li {
+    min-width: 100%;
+    height: 100%;
 }
 
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenido Flex y Menú Desplegable */
+.contenido-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 5%;
+    flex-wrap: wrap;
+}
+
+.Menu-despegable {
+    position: relative;
+}
+
+.Menu-despegable .titulo {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.Menu-despegable .titulo:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-darker);
+}
+
+.MenuMini {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-darker);
+    border-radius: 8px;
+    padding: 0.5rem;
+    min-width: 250px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+}
+
+.Menu-despegable:hover .MenuMini {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.MenuMini li {
+    padding: 0.5rem;
+}
+
+.MenuMini a {
+    display: block;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.MenuMini a:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-darker);
+    transform: translateX(5px);
+}
+
+/* Barra de Búsqueda */
+.botonBusqueda {
+    background-color: var(--card-bg);
+    padding: 0.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.busqueda-inside {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.botonBusqueda input {
+    width: 300px;
+    padding: 1rem 3rem 1rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.botonBusqueda input:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    outline: 2px solid var(--primary-color);
+}
+
+.botonBusqueda input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.icoBuscar {
+    position: absolute;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icoBuscar img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.icoBuscar:hover img {
+    opacity: 1;
+}
+
+/* Contenedor Principal y Columnas */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    gap: 2rem;
+    padding: 2rem 5%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.left-column,
+.center-column,
 .right-column {
-    flex: 1; /* Permitir que esta columna crezca */
-    max-width: 20%; /* Puedes ajustar esto según lo que necesites */
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Ajustes para pantallas más pequeñas */
+.left-column h2,
+.right-column h2,
+.center-column h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.center-column img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+}
+
+/* Enlaces en columnas laterales */
+.left-column ul li a {
+    display: block;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.left-column ul li a:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-darker);
+    transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: 1fr 2fr;
+        padding: 1rem;
+    }
+    
+    .right-column {
+        grid-column: span 2;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        grid-template-columns: 1fr;
     }
+    
+    .right-column {
+        grid-column: 1;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .main-nav h1 {
+        font-size: 2rem;
+    }
+    
+    .slider-box {
+        height: 400px;
+        margin: 1rem;
+    }
+    
+    .botonBusqueda input {
+        width: 250px;
+    }
+}
 
-    .left-column, .right-column, .center-column {
-        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+/* Animaciones */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.left-column,
+.center-column,
+.right-column {
+    animation: slideIn 0.5s ease-out;
 }
