@@ -1,16 +1,17 @@
-let toggle=document.gerElementById("toggle");
-let label_toggle=document.getElementById("label_toggle");
-toggle.addEventListener("change",(event)=>{
-    let checked=event.target.checkend;
-    document.body.classList.toggle("dark");
-    if (checked==true){
-        label_toggle.innerHTML=`<i class="fa-solid fa-sun"></i`;
-    }else{
-        label_toggle.innerHTML=`<i class="fa-solid fa-moon"></i`;
-    }
-    
-})
+let toggle = document.getElementById("toggle");
+let label_toggle = document.getElementById("label_toggle");
 
+toggle.addEventListener("change", (event) => {
+    let checked = event.target.checked; // Cambiado a 'checked'
+    document.body.classList.toggle("dark"); // Asegúrate de que tengas la clase 'dark' en tu CSS
+    if (checked === true) {
+        label_toggle.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+    } else {
+        label_toggle.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+    }
+});
+
+// Slider de imágenes
 const slider = document.querySelector('.slider');
 const sliderItems = document.querySelectorAll('.slider li');
 let currentIndex = 0;
@@ -29,5 +30,3 @@ function updateSliderPosition() {
 
 // Cambiar imagen automáticamente cada 3 segundos
 setInterval(showNextImage, 3000);
-
-
