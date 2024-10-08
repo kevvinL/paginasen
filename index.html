@@ -8,20 +8,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 </head>
-
-<header>
-    <nav>
-        <h1>MI TRABAJO HTML</h1>
-        <ul>
-            <li><a href="tablas.html">TABLAS</a></li>
-            <li><a href="listas.html">LISTAS</a></li>
-            <li><a href="enlazes.html">ENLAZES</a></li>
-            <li><a href="formulario.html">FORMULARIO</a></li>
-        </ul>
-            <label for="toggle"><i class="fa-solid fa-moon"></i></label>
-            <input type="checkbox" id="toggle">
-    </nav>
-</header>
+<body>
+    <header >
+        <nav>
+            <h1>MI TRABAJO HTML</h1>
+            <ul>
+                <li><a href="tablas.html">TABLAS</a></li>
+                <li><a href="listas.html">LISTAS</a></li>
+                <li><a href="enlazes.html">ENLAZES</a></li>
+                <li><a href="formulario.html">FORMULARIO</a></li>
+            </ul>
+                <div>
+                    <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
+                    <input type="checkbox" id="toggle">
+                </div>
+                <script src="script.js"></script>
+        </nav>
+    </header>
 
 
     <div class="slider-box">
@@ -35,32 +38,30 @@
             </ul>
         </div>
     </div>
-    <script src="script.js"></script>
-</body>
-    <div class="contenido-flex"> <!-- Nuevo contenedor para alinear -->
-        <!-- Menú desplegable de páginas -->
-        <div class="Menu-despegable">
-            <a href="#" class="titulo">Páginas</a>
-            <ul class="MenuMini">
-                <li><a href="https://www.sena.edu.co/es-co/Paginas/default.aspx">Página Sena</a></li>
-                <li><a href="https://comunidadsenaguajira.blogspot.com/2008/08/himno-del-sena.html">Himno del Sena</a></li>
-                <li><a href="https://oferta.senasofiaplus.edu.co/sofia-oferta/">Sofia plus</a></li>
-                <li><a href="https://caprendizaje.sena.edu.co/sgva/sgva_diseno/pag/login.aspx">Caprendizaje</a></li>
-            </ul>
-        </div>
+        <div class="contenido-flex"> <!-- Nuevo contenedor para alinear -->
+            <!-- Menú desplegable de páginas -->
+            <div class="Menu-despegable">
+                <a href="#" class="titulo">Páginas</a>
+                <ul class="MenuMini">
+                    <li><a href="https://www.sena.edu.co/es-co/Paginas/default.aspx">Página Sena</a></li>
+                    <li><a href="https://comunidadsenaguajira.blogspot.com/2008/08/himno-del-sena.html">Himno del Sena</a></li>
+                    <li><a href="https://oferta.senasofiaplus.edu.co/sofia-oferta/">Sofia plus</a></li>
+                    <li><a href="https://caprendizaje.sena.edu.co/sgva/sgva_diseno/pag/login.aspx">Caprendizaje</a></li>
+                </ul>
+            </div>
 
-        <!-- Campo de búsqueda con botón -->
-        <div class="botonBusqueda">
-            <div class="busqueda-inside">
-                <input type="text" name="search" placeholder="Buscador" required>
-                <div class="icoBuscar">
-                    <img src="buscar.jpg" alt="buscar">
+            <!-- Campo de búsqueda con botón -->
+            <div class="botonBusqueda">
+                <div class="busqueda-inside">
+                    <input type="text" name="search" placeholder="Buscador" required>
+                    <div class="icoBuscar">
+                        <img src="buscar.jpg" alt="buscar">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<body>
+
     <div class="container">
         <!-- Columna Izquierda -->
         <div class="left-column">
@@ -151,5 +152,6 @@
         <div class="grupo-2">
           <small>&copy; 2024 <b>Kevvin Olivares</b> - Todos los derechos reservados</small>
         </div>
+    
 </body>
 </html>
