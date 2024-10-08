@@ -17,12 +17,12 @@ nav {
     justify-content: space-between;
     padding: 20px 5%;
     font-weight: bold;
-    background-color: #1c1c1c;
-    box-shadow: 0px 2px 10px rgba(50, 248, 0, 0.5);
+    background-color: #5cdd4b;
+    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.5);
 }
 
 h1 {
-    color: #f5f5f5;
+    color: #ffffff;
     font-size: 50px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
@@ -114,7 +114,7 @@ a:hover {
     font-size: 22px;
     cursor: pointer;
     padding: 10px 20px;
-    background-color: #444;
+    background-color: #51cf31;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
@@ -140,7 +140,7 @@ a:hover {
 }
 
 .MenuMini li a {
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px 15px;
     display: block;
     text-decoration: none;
@@ -149,7 +149,7 @@ a:hover {
 }
 
 .MenuMini li a:hover {
-    background-color: #00d9ff;
+    background-color: #ffffff;
     color: #1c1c1c;
 }
 
@@ -173,14 +173,14 @@ a:hover {
     border: none;
     font-size: 18px;
     width: 300px;
-    background-color: #333;
+    background-color: #333333;
     color: white;
     outline: none;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 2px 5px rgb(255, 255, 255);
 }
 
 .botonBusqueda input[type="text"]::placeholder {
-    color: #aaa;
+    color: #ffffff;
 }
 
 .icoBuscar {
@@ -203,12 +203,12 @@ a:hover {
 
 
 :root {
-    --primary-color: #00d9ff;
+    --primary-color: #37a31c;
     --bg-dark: #2c2c2c;
     --bg-darker: #1c1c1c;
-    --text-light: #f5f5f5;
-    --accent-color: #007bff;
-    --hover-color: #0056b3;
+    --text-light: #ffffff;
+    --accent-color: #314e6d;
+    --hover-color: #a7b6c7;
     --card-bg: #333;
     --transition: all 0.3s ease;
 }
@@ -278,7 +278,7 @@ nav.main-nav {
     overflow: hidden;
     position: relative;
     border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 30px rgba(5, 245, 37, 0.5);
 }
 
 .slider {
@@ -337,7 +337,7 @@ nav.main-nav {
     border-radius: 8px;
     padding: 0.5rem;
     min-width: 250px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 20px rgba(1, 10, 3, 0.4);
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
@@ -372,7 +372,7 @@ nav.main-nav {
     background-color: var(--card-bg);
     padding: 0.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(5, 245, 37, 0.5);
 }
 
 .busqueda-inside {
@@ -386,7 +386,7 @@ nav.main-nav {
     padding: 1rem 3rem 1rem 1.5rem;
     border: none;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(179, 41, 41, 0.1);
     color: var(--text-light);
     font-size: 1rem;
     transition: var(--transition);
