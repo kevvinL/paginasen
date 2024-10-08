@@ -525,3 +525,22 @@ nav.main-nav {
 .right-column {
     animation: slideIn 0.5s ease-out;
 }
+
+.grupo-2 {
+    text-align: center; /* Centrar el texto */
+    margin-top: 50px; /* Espaciado superior */
+    padding: 20px; /* Espaciado interno */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente negro */
+    color: white; /* Color del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente */
+    position: relative; /* Posición relativa para el uso de pseudo-elementos si es necesario */
+  }
+  
+  .grupo-2 small {
+    display: block; /* Mostrar como bloque */
+  }
+  
+  .grupo-2 b {
+    color: #ffd700; /* Color dorado para el nombre */
+  }
