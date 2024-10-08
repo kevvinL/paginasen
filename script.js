@@ -6,8 +6,10 @@ toggle.addEventListener("change", (event) => {
     document.body.classList.toggle("dark"); // Asegúrate de que tengas la clase 'dark' en tu CSS
     if (checked === true) {
         label_toggle.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+        label_toggle.style.color="yellow";
     } else {
         label_toggle.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+        label_toggle.style.color="black";
     }
 });
 
